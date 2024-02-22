@@ -2,10 +2,11 @@ import React from 'react'
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import SubFooter from '../SubFooter/SubFooter';
 
 const Footer = () => {
 	return (
-		<section className='px-4 '>
+		<section className='px-4 pt-16'>
 			<footer className="footer py-5 mb-7">
 				<nav>
 					<h6 className="font-bold text-white text-base">Compañía</h6>
@@ -34,8 +35,9 @@ const Footer = () => {
 					</div>
 				</nav>
 			</footer>
-			<hr className=' pt-10 border-t-[#4b4b4b]' />
+			<hr className=' pt-10 border-t-[#272626]' />
 			<p className='hidden text-[#bbbbb4] mt-5 lg:block lg:pb-10'>© 2024 Spotify AB</p>
+			<SubFooter />
 		</section>
 	)
 }
