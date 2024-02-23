@@ -6,7 +6,7 @@ import SubFooter from '../SubFooter/SubFooter';
 
 const Footer = () => {
 	return (
-		<section className='px-4 pt-16'>
+		<section className='px-4 bg-[#121212] lg:rounded-b-lg pt-8 lg:ml-[20rem] lg:pl-7 lg:mr-2 lg:pb-20'>
 			<footer className="footer py-5 mb-7">
 				<nav>
 					<h6 className="font-bold text-white text-base">Compañía</h6>
@@ -36,7 +36,7 @@ const Footer = () => {
 				</nav>
 			</footer>
 			<hr className=' pt-10 border-t-[#272626]' />
-			<p className='hidden text-[#bbbbb4] mt-5 lg:block lg:pb-10'>© 2024 Spotify AB</p>
+			<p className='hidden text-[#bbbbb4] mt-5 lg:block lg:text-sm lg:pb-16'>© 2024 Spotify AB</p>
 			<SubFooter />
 		</section>
 	)

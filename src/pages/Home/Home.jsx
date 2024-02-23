@@ -1,12 +1,16 @@
 import React from 'react'
-import NavbarMobile from '../../components/NavbarMobile/NavbarMobile'
 import Footer from '../../components/Footer/Footer'
+import SpotifyPlaylist from '../../components/SpotifyPlaylist/SpotifyPlaylist'
+import RegistrationBanner from '../../components/RegistrationBanner/RegistrationBanner'
+import Aside from '../../components/Aside/Aside'
 
 const Home = () => {
     return (
-        <section className='bg-[#121212]'>
-            <NavbarMobile />
+        <section>
+            <Aside />
+            <SpotifyPlaylist />
             <Footer />
+            <RegistrationBanner />
         </section>
     )
 }

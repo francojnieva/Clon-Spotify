@@ -1,15 +1,15 @@
 import React from 'react'
-import logo from './assets/spotify_icon.svg'
 import { LuSearch } from "react-icons/lu";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
+import { BsSpotify } from "react-icons/bs";
 
 const NavbarMobile = () => {
 
     return (
-        <div className='fixed top-0 w-full p-3 bg-[#000000] flex justify-between items-center'>
-            <img className='w-9' src={logo} alt="Logo de Spotify" />
-            <div className=' flex items-center space-x-5'>
+        <div className='fixed top-0 w-full p-3 bg-[#000000] flex justify-between items-center lg:hidden'>
+            <BsSpotify className=' text-white text-4xl' />
+            <div className='flex items-center space-x-5'>
                 <div className=' flex items-center space-x-5'>
                     <LuSearch className=' text-white text-lg' />
                     <button className='bg-white w-32 text-black rounded-full py-2 px-4 text-xs font-bold md:text-sm md:py-1.5 md:w-36'>Abrir aplicación</button>
