@@ -22,7 +22,7 @@ const Aside = () => {
                     </button>
                 </div>
             </div>
-            <div className='px-2 pb-3 pt-4 bg-[#121212] rounded-lg'>
+            <div className='px-2 pb-20 pt-4 bg-[#121212] rounded-lg'>
                 <div className=' flex items-center justify-between pb-4'>
                     <div className="tooltip pl-3" data-tip="Comprimir Tu biblioteca">
                         <button className=" flex font-bold tracking-wide transition-all hover:text-white">
@@ -34,20 +34,20 @@ const Aside = () => {
                         <FiPlus className=' text-[1.3rem] hover:cursor-pointer' />
                     </div>
                 </div>
-                <div className='text-white h-[4.2rem] overflow-scroll space-y-7 scrollbar '>
-                    <div className=' px-4 py-3 bg-[#242424] space-y-5 rounded-xl'>
+                <div className='text-white h-[4.7rem] w-[19rem] overflow-scroll space-y-7 scrollbar '>
+                    <div className=' p-3 bg-[#242424] space-y-3 rounded-xl'>
                         <h6 className='font-bold'>Crea tu primera playlist</h6>
-                        <small>¡Es muy facil, te vamos a ayudar!</small>
+                        <p className=' text-sm'>¡Es muy facil, te vamos a ayudar!</p>
                         <button className='py-1 px-3 text-sm bg-white font-bold text-black rounded-full'>Crear playlist</button>
                     </div>
-                    <div className=' p-3 bg-[#242424] space-y-5 rounded-xl'>
-                        <h6 className='font-bold'>Crea tu primera playlist</h6>
-                        <small>¡Es muy facil, te vamos a ayudar!</small>
-                        <button className='py-1 px-3 text-sm bg-white font-bold text-black rounded-full'>Crear playlist</button>
+                    <div className=' p-3 bg-[#242424] space-y-3 rounded-xl'>
+                        <h6 className='font-bold'>Busquemos algunos podcasts para seguir</h6>
+                        <p className=' text-sm'>Te mantendremos al tanto de los nuevos episodios. </p>
+                        <button className='py-1 px-3 text-sm bg-white font-bold text-black rounded-full'>Explorar podcasts</button>
                     </div>
                 </div>
                 <div className='pt-8 pb-12 px-3 space-y-5'>
-                    <div className=' flex flex-wrap gap-6 pb-4 text-[.68rem] md:gap-4'>
+                    <div className=' flex flex-wrap gap-6 text-[.68rem] md:gap-4'>
                         <a>Legal</a>
                         <a>Seguridad y Centro de Privacidad</a>
                         <a>Política de Privacidad</a>

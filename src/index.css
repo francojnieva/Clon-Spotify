@@ -14,7 +14,7 @@
 
 @layer components {
     .footer-links {
-        @apply text-[#bbbbb4] text-base hover:underline hover:text-white
+        @apply text-[#a8a8a5] text-base hover:underline hover:text-white hover:cursor-pointer
     }
 
     .footer-icon {

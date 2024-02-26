@@ -3,7 +3,7 @@ import { TbWorld } from "react-icons/tb";
 
 const SubFooter = () => {
     return (
-        <section className='text-[#bbbbb4] lg:hidden'>
+        <section className='text-[#bbbbb4] pb-7 lg:hidden'>
             <div className=' flex flex-wrap gap-6 pb-4 text-sm md:gap-4'>
                 <a>Legal</a>
                 <a>Seguridad y Centro de Privacidad</a>

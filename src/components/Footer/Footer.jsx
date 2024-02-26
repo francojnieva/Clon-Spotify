@@ -29,9 +29,9 @@ const Footer = () => {
 				</nav>
 				<nav>
 					<div className="grid grid-flow-col gap-4">
-						<a href=""><FaInstagram className='footer-icon' /></a>
-						<a href=""><FaTwitter className='footer-icon' /></a>
-						<a href=""><FaFacebook className='footer-icon' /></a>
+						<a><FaInstagram className='footer-icon' /></a>
+						<a><FaTwitter className='footer-icon' /></a>
+						<a><FaFacebook className='footer-icon' /></a>
 					</div>
 				</nav>
 			</footer>

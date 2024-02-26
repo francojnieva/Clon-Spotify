@@ -17,12 +17,11 @@ const NavbarDesktop = () => {
                         <a href='#' className='hover:text-white hover:scale-105 transition-all'>Descargar</a>
                     </div>
                     <div className=' flex items-center space-x-6'>
-                        <a className='hover:text-white hover:scale-105 transition-all'>Regístrate</a>
-                        <a className='py-3 px-8 bg-white text-black font-bold hover:scale-105 rounded-full hover:bg-slate-50'>Iniciar sesión</a>
+                        <a  href='#' className='hover:text-white hover:scale-105 transition-all'>Regístrate</a>
+                        <a  href='#' className='py-3 px-8 bg-white text-black font-bold hover:scale-105 rounded-full hover:bg-slate-50'>Iniciar sesión</a>
                     </div>
                 </div>
            </nav>
-       
         </section>
        
     )
