@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home/Home"
+import Layout from "./components/Layout/Layout"
+import ItemArtist from "./components/ItemArtist/ItemArtist"
 
 function App() {
 
@@ -7,7 +9,8 @@ function App() {
 		
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route path="/" element={<Layout><Home /></Layout>} />
+				<Route path="/artist/:id" element={<Layout><ItemArtist /></Layout>} />
 			</Routes>
 		</BrowserRouter>
 	)

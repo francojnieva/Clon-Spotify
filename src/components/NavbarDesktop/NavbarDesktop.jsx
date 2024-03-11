@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const NavbarDesktop = () => {
     return (
-        <section className='hidden lg:block lg:ml-[20rem]'>
+        <section className='hidden lg:block lg:ml-[20rem] lg:pr-2 lg:pt-2'>
             <nav className='flex justify-between bg-[#101010] p-2 lg:pl-7 lg:rounded-t-lg lg:pr-6'>
                 <div className=' flex  items-center text-[#8a8a8a] space-x-2'>
                     <button className='hover:cursor-not-allowed'><IoIosArrowBack  className='p-1 rounded-full text-[2rem] bg-[#0A0A0A]'/></button>

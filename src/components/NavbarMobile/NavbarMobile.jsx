@@ -7,7 +7,7 @@ import { BsSpotify } from "react-icons/bs";
 const NavbarMobile = () => {
 
     return (
-        <div className='fixed top-0 w-full p-3 bg-[#000000] flex justify-between items-center lg:hidden'>
+        <div className='fixed top-0 w-full p-3 bg-[#000000] z-50 flex justify-between items-center lg:hidden'>
             <BsSpotify className=' text-white text-4xl' />
             <div className='flex items-center space-x-5'>
                 <div className=' flex items-center space-x-5'>
