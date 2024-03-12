@@ -3,12 +3,13 @@ import { LuSearch } from "react-icons/lu";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsSpotify } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const NavbarMobile = () => {
 
     return (
         <div className='fixed top-0 w-full p-3 bg-[#000000] z-50 flex justify-between items-center lg:hidden'>
-            <BsSpotify className=' text-white text-4xl' />
+            <Link to='/'><BsSpotify className=' text-white text-4xl' /></Link>
             <div className='flex items-center space-x-5'>
                 <div className=' flex items-center space-x-5'>
                     <LuSearch className=' text-white text-lg' />

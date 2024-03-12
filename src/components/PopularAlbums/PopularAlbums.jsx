@@ -45,7 +45,7 @@ const PopularAlbums = () => {
                     <a className=' text-sm font-bold text-[#adadad] hover:underline hover:cursor-pointer hidden lg:block'>Mostrar todo</a>
                 </div>
                 <div className="carousel carousel-center w-full pt-2 pb-3 space-x-4">
-                {loading && <p className="loading loading-ring loading-lg m-auto"></p>}
+                {loading && <p className="loading loading-ring loading-lg m-auto text-[#1FDF64]"></p>}
                 {errorMessage && <p className=' text-center text-red-600'>Problemas en el servidor, intenta más tarde.</p>}
                 {popularAlbums.map((album) => (
                         <Card

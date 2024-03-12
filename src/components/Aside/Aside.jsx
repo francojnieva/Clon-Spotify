@@ -5,12 +5,13 @@ import logo from './assets/spotify-logo.svg'
 import { FiPlus } from "react-icons/fi";
 import { BiLibrary } from "react-icons/bi";
 import { TbWorld } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 const Aside = () => {
     return (
         <aside className='hidden lg:block m-2 rounded-lg w-[19rem] text-[#adadad] fixed top-0'>
             <div className='px-5 pb-6 mb-2 bg-[#121212] rounded-lg' >
-                <img className='w-20 hover:cursor-pointer' src={logo} alt="Logo de Spotify" />
+                <Link to='/'><img className='w-20 hover:cursor-pointer' src={logo} alt="Logo de Spotify" /></Link>
                 <div className=' space-y-6'>
                     <button className='tracking-wider flex items-center font-bold text-[.95rem] transition-all hover:text-white' >
                         <GoHome className='mr-4 text-[1.75rem]' />
