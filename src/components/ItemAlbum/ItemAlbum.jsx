@@ -28,7 +28,6 @@ const ItemAlbum = () => {
                 const responseAlbum = await axios.get(`${URL}/albums/${id}`, { headers })
 
                 setAlbum(responseAlbum.data)
-                console.log(responseAlbum.data)
 
             } catch (error) {
                 if (error.response && error.response.status === 401) {
@@ -47,7 +46,7 @@ const ItemAlbum = () => {
 
     }, [id])
 
-    const Image = album.images[0].url
+    const image = album.images && album.images[0].url
 
     return (
         <section className='pt-20 px-4 bg-[#121212] space-y-5 text-white lg:ml-[20rem] lg:px-0 lg:pt-0  lg:mr-2'>
@@ -59,13 +58,13 @@ const ItemAlbum = () => {
             </div>}
             <div className='hidden lg:block px-4 lg:pt-4 '>
                 <div className='flex items-end lg:px-4'>
-                    <img className='w-44 rounded-md mr-5 xl:w-56' src={Image} alt={album.name} />
+                    <img className='w-44 rounded-md mr-5 xl:w-56' src={image} alt={album.name} />
                     <div>
                         <h2 className=' font-bold text-3xl pb-3 lg:text-5xl'>{album.name}</h2>
                         <div className='flex items-center space-x-3 text-[#A7A7A7] lg:text-white lg:text-lg'>
-                            <small className='text-[#A7A7A7] lg:text-white'>{album.artists[0].name}</small>
+                            <small className='text-[#A7A7A7] lg:text-white'>{album.artists && album.artists[0].name}</small>
                             <p>▪</p>
-                            <small>{album.release_date.split('-')[0]}</small>
+                            <small>{album.release_date && album.release_date.split('-')[0]}</small>
                             <p>▪</p>
                             <small>{album.total_tracks} canciones</small>
                         </div>
@@ -73,11 +72,11 @@ const ItemAlbum = () => {
                 </div>
             </div>
             <div className=' space-y-3 lg:hidden'>
-                <img className='m-auto -mt-5  w-40 object-cover' src={Image} alt={album.name} />
+                <img className='m-auto -mt-5  w-40 object-cover' src={image} alt={album.name} />
                 <h2 className=' font-bold text-3xl pb-3 lg:text-8xl'>{album.name}</h2>
-                <small className='text-[#A7A7A7] lg:text-white lg:text-lg'>{album.artists[0].name}</small>
+                <small className='text-[#A7A7A7] lg:text-white lg:text-lg'>{album.artists && album.artists[0].name}</small>
                 <div className='flex items-center space-x-3 text-[#A7A7A7] lg:text-white lg:text-lg'>
-                    <small>{album.release_date.split('-')[0]}</small>
+                    <small>{album.release_date && album.release_date.split('-')[0]}</small>
                     <p>▪</p>
                     <small>{album.total_tracks} canciones</small>
                 </div>
@@ -93,15 +92,15 @@ const ItemAlbum = () => {
                     <img className='w-12' src={play} alt="icono de play" />
                 </button>
             </div>
-            <div className='hidden lg:block text-[#A7A7A7] lg:px-4'>
+            <div className='hidden lg:block text-[#A7A7A7] lg:px-16'>
                 <div className='lg:flex justify-between items-center'>
                     <small>Título</small>
                     <IoTimeOutline />
                 </div>
             </div>
-            <div className='mb-4 lg:px-4'>
-                {album.tracks.items.map(track => (
-                    <div key={track.id} className='pl-2 py-2 flex justify-between items-center lg:px-4 hover:bg-[#2c2b2b] space-y-6 group'>
+            <div className='lg:px-4'>
+                {album.tracks && album.tracks.items.map(track => (
+                    <div key={track.id} className='pl-2 py-2 flex justify-between items-center lg:px-4 hover:bg-[#2c2b2b] group'>
                         <div className=' flex flex-col'>
                             <p>{track.name}</p>
                             <small className='ml-0 text-[#A7A7A7] font-medium'>{track.artists[0].name}</small>

@@ -52,8 +52,8 @@ const ItemArtist = () => {
 
     }, [id])
 
-    const backgroundImage = `url(${artist.images[0].url})`
-    const Image = artist.images[0].url
+    const backgroundImage = artist.images && `url(${artist.images[0].url})`
+    const image = artist.images && artist.images[0].url
 
     return (
         <section className='pt-20 px-4 bg-[#121212] space-y-5 text-white lg:ml-[20rem] lg:px-0 lg:pt-0  lg:mr-2'>
@@ -63,14 +63,14 @@ const ItemArtist = () => {
             { loading && <div className='h-80 flex justify-center items-center'>
                 <p className="loading loading-ring loading-lg m-auto text-[#1FDF64]"></p>
             </div> }
-            <div className=' space-y-5 hidden bg-cover bg-center lg:block px-4 py-12' style={backgroundImage}>
+            <div className=' space-y-5 hidden bg-cover bg-center lg:block px-4 py-12' style={{backgroundImage}}>
                 <h2 className=' font-bold text-3xl pb-3 lg:text-6xl xl:text-8xl'>{artist.name}</h2>
-                <small className='text-[#A7A7A7] font-medium lg:text-white xl:text-lg'>{artist.followers.total.toLocaleString()} oyentes mensuales</small>
+                <small className='text-[#A7A7A7] font-medium lg:text-white xl:text-lg'>{artist.followers && artist.followers.total.toLocaleString()} oyentes mensuales</small>
             </div>
             <div className=' space-y-5 lg:hidden'>
-                <img className='m-auto -mt-5 rounded-full h-36 w-36 object-cover' src={Image} alt={artist.name} />
+                <img className='m-auto -mt-5 rounded-full h-36 w-36 object-cover' src={image} alt={artist.name} />
                 <h2 className=' font-bold text-3xl pb-3 lg:text-8xl'>{artist.name}</h2>
-                <small className='text-[#A7A7A7] lg:text-white lg:text-lg'>{artist.followers.total.toLocaleString()} oyentes mensuales</small>
+                <small className='text-[#A7A7A7] lg:text-white lg:text-lg'>{artist.followers && artist.followers.total.toLocaleString()} oyentes mensuales</small>
             </div>
             <div className='flex justify-between items-center lg:px-4 lg:justify-end lg:flex-row-reverse xl:py-4'>
                 <div className=' flex items-center space-x-6'>
