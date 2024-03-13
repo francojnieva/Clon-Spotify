@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        background-color: #000;
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+@layer components {
+    .footer-links {
+        @apply text-[#a8a8a5] text-base hover:underline hover:text-white hover:cursor-pointer
+    }
+
+    .footer-icon {
+        @apply text-white bg-[#292929] p-2 text-4xl rounded-full hover:bg-[#575757]
+    }
+}
