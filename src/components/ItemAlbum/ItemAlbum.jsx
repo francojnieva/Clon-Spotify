@@ -88,7 +88,29 @@ const ItemAlbum = () => {
                     <button className='lg:hover:scale-105 lg:hidden'><LiaEllipsisVSolid className='text-[#A7A7A7] text-2xl' /></button>
                     <button className='hidden lg:block lg:hover:scale-105'><HiEllipsisHorizontal className='text-[#A7A7A7] text-3xl' /></button>
                 </div>
-                <button className='lg:mr-7 lg:hover:scale-105'>
+                <button onClick={() => document.getElementById('my_modal_1').showModal()} className='lg:mr-7 lg:hover:scale-105'>
+                    <dialog id="my_modal_1" className="modal">
+                        <div className="modal-box bg-[#29323a] text-white space-y-5 lg:flex items-center lg:px-12">
+                            <div className='hidden lg:block lg:mr-5'>
+                                <div className='flex justify-center items-center'>
+                                    <img className='w-96 rounded-lg' src={image} alt={album.name} />
+                                </div>
+                            </div>
+                            <div className='space-y-6'>
+                                <h3 className="font-bold text-2xl text-center">Empieza a escuchar con una cuenta gratis de Spotify</h3>
+                                <div className=' space-y-4 md:space-x-3'>
+                                    <button className="py-3 px-5 text-black font-bold bg-[#1FDF64] rounded-full hover:scale-105">Registrarse gratis</button>
+                                    <button className="py-3 px-5 border font-bold border-[#A7A7A7] rounded-full hover:scale-105">Descargar aplicación</button>
+                                </div>
+                                <p className='text-[#A7A7A7]'>¿Ya tienes una cuenta? <span className='font-bold text-white text-sm'>Iniciar sesión</span></p>
+                                <div className="modal-action">
+                                    <form method="dialog">
+                                        <button className="font-bold text-sm">Cerrar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
                     <img className='w-12' src={play} alt="icono de play" />
                 </button>
             </div>
@@ -100,7 +122,7 @@ const ItemAlbum = () => {
             </div>
             <div className='lg:px-4'>
                 {album.tracks && album.tracks.items.map(track => (
-                    <div key={track.id} className='pl-2 py-2 flex justify-between items-center lg:px-4 hover:bg-[#2c2b2b] group'>
+                    <div onClick={() => document.getElementById('my_modal_1').showModal()} key={track.id} className='pl-2 py-2 flex justify-between items-center lg:px-4 hover:bg-[#2c2b2b] group'>
                         <div className=' flex flex-col'>
                             <p>{track.name}</p>
                             <small className='ml-0 text-[#A7A7A7] font-medium'>{track.artists[0].name}</small>

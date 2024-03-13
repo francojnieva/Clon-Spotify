@@ -23,7 +23,7 @@ const Aside = () => {
                     </button>
                 </div>
             </div>
-            <div className='px-2 pb-20 pt-4 bg-[#121212] rounded-lg'>
+            <div className='px-2 pb-20 pt-4 bg-[#121212] rounded-lg xl:h-screen'>
                 <div className=' flex items-center justify-between pb-4'>
                     <div className="tooltip pl-3" data-tip="Comprimir Tu biblioteca">
                         <button className=" flex font-bold tracking-wide transition-all hover:text-white">
