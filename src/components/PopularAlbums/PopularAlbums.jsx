@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Card from '../Card/Card'
 import { tokenApiSpotify } from '../../services/fetchToken.js'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const PopularAlbums = () => {
 
@@ -48,13 +49,15 @@ const PopularAlbums = () => {
                 {loading && <p className="loading loading-ring loading-lg m-auto text-[#1FDF64]"></p>}
                 {errorMessage && <p className=' text-center text-red-600'>Problemas en el servidor, intenta más tarde.</p>}
                 {popularAlbums.map((album) => (
+                    <Link key={album.id} to={`/album/${album.id}`}>
                         <Card
                             key={album.id}
                             title={album.name}
                             imageUrl={album.images[0].url}
                             artist={album.artists[0].name}
                         />
-                    ))}
+                    </Link>
+                ))}
                 </div>
             </section>
     )
