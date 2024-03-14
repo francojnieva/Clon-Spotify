@@ -17,7 +17,7 @@ const PopularArtistsSection = () => {
             try {
                 const token = await tokenApiSpotify()
 
-                const responsePopularArtist = await axios.get(`${URL}/v1/artists?ids=06HL4z0CvFAxyc27GXpf02,3TVXtAsR1Inumwj472S9r4,5K4W6rqBFWDnAN6FQUkS6x,0Y5tJX1MQlPlqiwlOH1tJY,1Xyo4u8uXC1ZmMpatF05PJ`,
+                const responsePopularArtist = await axios.get(`${URL}/v1/artists?ids=06HL4z0CvFAxyc27GXpf02,3TVXtAsR1Inumwj472S9r4,5K4W6rqBFWDnAN6FQUkS6x,0Y5tJX1MQlPlqiwlOH1tJY,1URnnhqYAYcrqrcwql10ft,1Xyo4u8uXC1ZmMpatF05PJ,4oUHIQIBe0LHzYfvXNW4QM,40ZNYROS4zLfyyBSs2PGe2,7tYKF4w9nC0nq9CsPZTHyP,1RyvyyTE3xzB2ZywiAwp0i`,
                     {
                         headers: {
                             'Authorization': `Bearer ${token}`
@@ -46,8 +46,8 @@ const PopularArtistsSection = () => {
                     <h1 className=' text-lg font-bold lg:text-2xl hover:underline hover:cursor-pointer'>Artistas populares</h1>
                     <a className=' text-sm font-bold text-[#adadad] hover:underline hover:cursor-pointer hidden lg:block'>Mostrar todo</a>
                 </div>
-                <div className="carousel carousel-center w-full pt-2 pb-3 space-x-4">
-                    {loading && <p className="loading loading-ring loading-lg m-auto text-[#1FDF64]"></p>}
+                <div className="carousel carousel-center w-full xl:h-80 pt-2 pb-3 space-x-4">
+                    {loading && <p className="loading loading-ring loading-lg m-auto h-80 text-[#1FDF64]"></p>}
                     {errorMessage && <p className=' text-center text-red-600'>Problemas en el servidor, intenta más tarde.</p>}
                     {popularArtist.map((artist) => (
                         <Link key={artist.id} to={`/artist/${artist.id}`}>
