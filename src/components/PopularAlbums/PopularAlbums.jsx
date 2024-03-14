@@ -17,12 +17,12 @@ const PopularAlbums = () => {
             try {
                 const token = await tokenApiSpotify()
 
-                const responsePopularAlbums = await axios.get(`${URL}/v1/albums?ids=6i7mF7whyRJuLJ4ogbH2wh,30zwjSQEodaUXCn11nmiVF,18NOKLkZETa4sWwLMIm0UZ,2RRYaYHY7fIIdvFlvgb5vq,07w0rG5TETcyihsEIZR3qG`,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${ token }`
-                    }
-                })
+                const responsePopularAlbums = await axios.get(`${URL}/v1/albums?ids=6i7mF7whyRJuLJ4ogbH2wh,30zwjSQEodaUXCn11nmiVF,18NOKLkZETa4sWwLMIm0UZ,2RRYaYHY7fIIdvFlvgb5vq,07w0rG5TETcyihsEIZR3qG,5EYKrEDnKhhcNxGedaRQeK,6PbnGueEO6LGodPfvNldYf,1NAmidJlEaVgA3MpcPFYGq,4czdORdCWP9umpbhFXK2fW,1xJHno7SmdVtZAtXbdbDZp`,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    })
                 setPopularAlbums(responsePopularAlbums.data.albums)
 
             } catch (error) {
@@ -41,12 +41,12 @@ const PopularAlbums = () => {
 
     return (
         <section className='px-4 pb-5 bg-[#121212] text-white lg:pl-7 lg:mr-2 lg:ml-[20rem]'>
-                <div className=' flex justify-between items-center'>
-                    <h1 className=' text-lg font-bold lg:text-2xl hover:underline hover:cursor-pointer'>Álbumes populares</h1>
-                    <a className=' text-sm font-bold text-[#adadad] hover:underline hover:cursor-pointer hidden lg:block'>Mostrar todo</a>
-                </div>
-                <div className="carousel carousel-center w-full pt-2 pb-3 space-x-4">
-                {loading && <p className="loading loading-ring loading-lg m-auto text-[#1FDF64]"></p>}
+            <div className=' flex justify-between items-center'>
+                <h1 className=' text-lg font-bold lg:text-2xl hover:underline hover:cursor-pointer'>Álbumes populares</h1>
+                <a className=' text-sm font-bold text-[#adadad] hover:underline hover:cursor-pointer hidden lg:block'>Mostrar todo</a>
+            </div>
+            <div className="carousel carousel-center w-full pt-2 pb-3 xl:h-80 space-x-4">
+                {loading && <p className="loading loading-ring loading-lg m-auto h-80 text-[#1FDF64]"></p>}
                 {errorMessage && <p className=' text-center text-red-600'>Problemas en el servidor, intenta más tarde.</p>}
                 {popularAlbums.map((album) => (
                     <Link key={album.id} to={`/album/${album.id}`}>
@@ -58,8 +58,8 @@ const PopularAlbums = () => {
                         />
                     </Link>
                 ))}
-                </div>
-            </section>
+            </div>
+        </section>
     )
 }
 
